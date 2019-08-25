@@ -40,9 +40,12 @@ This allows easy integration with other home automation softwares such as [node-
 ## Installation Instructions
 
 #1.  Add the following to the package.json file in the nodejs-poolController folder 
+
 "jsonata": "^1.5.3",
 "mqtt": "^2.17.0",
+
 #2.  Add the following to the config.json file in the nodejs-poolController folder 
+
 "integrations": {
         "outputSocketToMQTT": 1
     },
