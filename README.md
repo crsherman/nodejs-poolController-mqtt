@@ -55,15 +55,17 @@ This allows easy integration with other home automation softwares such as [node-
 
 Precaution:  make a backup copy of your config.json or customized configuration file.  
 
-#3.  Add the outputSocketToMQTT.js file to the nodejs-poolController/src/inegrations folder on your rapsberry pi
+#3.  Modify outputSocketToMQTT.js line 42 to specify the IP address of YOUR MQTT server on your network.
 
-#4.  Run npm install in the nodejs-poolController folder where package.json exists
+#4.  Add the outputSocketToMQTT.js file to the nodejs-poolController/src/inegrations folder on your rapsberry pi
+
+#5.  Run npm install in the nodejs-poolController folder where package.json exists
 
 ## Requirements
 
 A mqtt broker must be available on your network.  I utilize the Eclipse Mosquitto MQTT broker [here](https://mosquitto.org).
 
-Of course the nodejs-poolController running on your system.
+Of course the nodejs-poolController running on your system.  PLEASE NOTE: THIS INTEGRATION ONLY WORKS FOR VERSION 5.3.1 AND LOWER.  IT HAS NOT BEEN UPDATED FOR THE NEWER VERSION 6.0.
 
 Node-red if you are planning on integrating into a home automation system or such.
 
