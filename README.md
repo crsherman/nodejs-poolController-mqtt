@@ -71,7 +71,7 @@ Node-red if you are planning on integrating into a home automation system or suc
 
 ## Credits
 
-[Scargill's Tech Blog](https://tech.scargill.net).  A wealth of information on node-red, iot, home automation and such.  I cannot say enought good things about this website.  The LCD panel utilized on my node-red flow is directly from his blog (among other things).
+[Scargill's Tech Blog](https://tech.scargill.net).  A wealth of information on node-red, iot, home automation and such.  I cannot say enough good things about this website.  The LCD panel utilized on my node-red flow is directly from his blog (among other things).
 
 [nodejs-poolController](https://github.com/tagyoureit/nodejs-poolController).  Tagyoureit's incredible app that provides connection to our Pentair pool controllers.
 
