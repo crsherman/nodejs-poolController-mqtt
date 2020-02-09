@@ -15,6 +15,11 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+ /*
+ *  Updated Integration for sending pool info via mqtt.
+ *  Version 1.1 Updated service to include temperature values.
+ */
+
 
 //This makes the module available to the app through BottleJS
 module.exports = function(container) {
@@ -92,8 +97,12 @@ module.exports = function(container) {
   				var poolHeatMode = jsonata("temperature.poolHeatMode").evaluate(data)
 				var poolSetpoint = jsonata("temperature.poolSetPoint").evaluate(data)			
   				var spaHeatMode = jsonata("temperature.spaHeatMode").evaluate(data)
-  				var spaSetpoint = jsonata("temperature.spaSetPoint").evaluate(data)
-  				sendMqttHeatStatus(poolHeatMode,poolSetpoint,spaHeatMode,spaSetpoint)
+				var spaSetpoint = jsonata("temperature.spaSetPoint").evaluate(data)
+				var poolTemp=jsonata("temperature.poolTemp").evaluate(data)
+  				var spaTemp=jsonata("temperature.spaTemp").evaluate(data)
+  				var airTemp=jsonata("temperature.airTemp").evaluate(data)
+				sendMqttHeatStatus(poolHeatMode,poolSetpoint,spaHeatMode,spaSetpoint)
+				sendMqttTemp(poolTemp,spaTemp,airTemp)
 	})
 
     //The 'error' function fires if there is an error connecting to the socket
@@ -111,9 +120,23 @@ module.exports = function(container) {
 		var circuit_str = "pool/circuit/"+String(circuit)+"/status"
 		var status_str = String(status)
 		client.publish(circuit_str,status_str)
- 	} 
+	 } 
+	 
+//Function to send temperature values (pool, spa and air) via mqtt
+	function sendMqttTemp(poolTemp,spaTemp,airTemp) {
+		console.log(`Temperatures:  Pool Temp:${poolTemp}, Spa Temp:${spaTemp}, Air Temp:${airTemp}`)
+		var poolTemp_str = "pool/temperatures/pool"
+		var spaTemp_str = "pool/temperatures/spa"
+		var airTemp_str = "pool/temperatures/air"
+		var poolTemp_value_str = String(poolTemp)
+		var spaTemp_value_str = String(spaTemp)
+		var airTemp_value_str = String(airTemp)
+		client.publish(poolTemp_str,poolTemp_value_str)
+		client.publish(spaTemp_str,spaTemp_value_str)
+		client.publish(airTemp_str,airTemp_value_str)
+	} 
 
-//Function to send circuit status update via mqtt
+//Function to send Heat status update via mqtt
 	function sendMqttHeatStatus(poolHeatMode, poolSetpoint, spaHeatMode, spaSetpoint) {
 		console.log(`Pool Heat status is ${poolHeatMode}`)
 		console.log(`Spa Heat status is ${spaHeatMode}`)

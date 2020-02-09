@@ -30,6 +30,8 @@ nodejs-poolController is an application to communicate and control your Pentair 
 
 ## What is nodejs-poolController-mqtt
 
+Version 1.1: added support for temperature values (Pool, Spa and Air) to be submitted via mqtt.
+
 nodejs-poolController-mqtt is an integration for the nodejs-poolController app.  It allows the utilization of the mqtt protocol.  For more details on mqtt vist [here](http://mqtt.org)
 
 This allows easy integration with other home automation softwares such as [node-red](https://nodered.org) and allows the development of a dashboard for use on a mobile phone such as the following:
