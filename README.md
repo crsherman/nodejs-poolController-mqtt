@@ -41,14 +41,14 @@ This allows easy integration with other home automation softwares such as [node-
 
 ## Installation Instructions
 
-1. Add the following to the package.json file in the nodejs-poolController folder 
+1. Add the following to the `package.json` file in the `nodejs-poolController` folder 
 
 ```json
 "jsonata": "^1.5.3",
 "mqtt": "^2.17.0",
 ```
 
-2. Add the following to the config.json file in the nodejs-poolController folder 
+2. Add the following to the `config.json` file in the `nodejs-poolController` folder 
 
 ```json
 "integrations": {
@@ -64,7 +64,7 @@ Precaution:  make a backup copy of your config.json or customized configuration 
 3. Modify outputSocketToMQTT.js line 42 to specify the IP address of YOUR MQTT server on your network. ALTERNATIVELY, you can set environment variables where you start npm:
 
 ```bash
-export MQTT_BROKER_ADDRESS=http://192.168.1.179:1883
+export MQTT_BROKER_ADDRESS="http://192.168.1.179:1883"
 ```
 
 ...and optionally a username and password (if required):
