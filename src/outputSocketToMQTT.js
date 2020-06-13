@@ -41,10 +41,23 @@ module.exports = function(container) {
         secureTransport = true
     }
 
+    // *****IMPORTANT: Ensure you have an environment variable MQTT_BROKER_URL set to your broker
+    // (or change the following line to connect to your mqtt broker ip address)
+    var broker_address = process.env.MQTT_BROKER_URL || "http://192.168.1.179:1883"
+
+    var options = {
+	clientId: "nodejs-poolController-mqtt"
+    }
+
+    // if a MQTT username/password is specified in the environment, use them for connecting to the broker
+    if (process.env.MQTT_USERNAME) {
+	options['username'] = process.env.MQTT_USERNAME
+	options['password'] = process.env.MQTT_PASSWORD
+    }
+    
     //setup mqtt
-	var mqtt = require('mqtt')
-	// *****IMPORTANT: Change the following line to connect to your mqtt broker ip address
-    var client = mqtt.connect('http://192.168.1.179:1883')
+    var mqtt = require('mqtt')    
+    var client = mqtt.connect(mqtt_broker_address, options)
 
   //setup jsonata
    	var jsonata = require("jsonata") 
