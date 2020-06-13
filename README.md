@@ -57,9 +57,16 @@ This allows easy integration with other home automation softwares such as [node-
 
 Precaution:  make a backup copy of your config.json or customized configuration file.  
 
-#3.  Modify outputSocketToMQTT.js line 42 to specify the IP address of YOUR MQTT server on your network.
+#3.  Modify outputSocketToMQTT.js line 42 to specify the IP address of YOUR MQTT server on your network. ALTERNATIVELY, you can set environment variables where you start npm:
 
-#4.  Add the outputSocketToMQTT.js file to the nodejs-poolController/src/inegrations folder on your rapsberry pi
+export MQTT_BROKER_ADDRESS=http://192.168.1.179:1883
+
+...and optionally a username and password (if required):
+
+export MQTT_USERNAME=your-mqtt-username
+export MQTT_PASSWORD=your-mqtt-password
+
+#4.  Add the outputSocketToMQTT.js file to the nodejs-poolController/src/integrations folder on your Rapsberry Pi
 
 #5.  Run npm install in the nodejs-poolController folder where package.json exists
 
