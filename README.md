@@ -1,7 +1,6 @@
 # nodejs-poolController-mqtt  Version 1.0
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
-
 [![Join the chat at https://gitter.im/nodejs-poolController/Lobby](https://badges.gitter.im/nodejs-poolController/Lobby.svg)](https://gitter.im/nodejs-poolController/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) 
 
 MQTT integration for the [nodejs-poolController](https://github.com/tagyoureit/nodejs-poolController) pool equipment controller written by tagyoureit. This allows communication and control of Pentair (and other supported model) pool equipment via [MQTT](http://mqtt.org), allowing for integration with any home automation systems which can interact with MQTT messages.
@@ -61,6 +60,10 @@ export MQTT_PASSWORD=your-mqtt-password
 4. Add the `outputSocketToMQTT.js` file to the `nodejs-poolController/src/integrations` folder on your Rapsberry Pi
 
 5. Run npm install in the `nodejs-poolController` folder where package.json exists
+
+## See Also
+
+* [nodejs-poolController support chat](https://gitter.im/nodejs-poolController/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ## Credits
 
