@@ -1,43 +1,29 @@
 # nodejs-poolController-mqtt  Version 1.0
 
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
+
 [![Join the chat at https://gitter.im/nodejs-poolController/Lobby](https://badges.gitter.im/nodejs-poolController/Lobby.svg)](https://gitter.im/nodejs-poolController/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) 
 
- A MQTT integration for the application nodejs-poolController written by tagyoureit.
+MQTT integration for the [nodejs-poolController](https://github.com/tagyoureit/nodejs-poolController) pool equipment controller written by tagyoureit. This allows communication and control of Pentair (and other supported model) pool equipment via [MQTT](http://mqtt.org), allowing for integration with any home automation systems which can interact with MQTT messages.
 
-
-# License
-
-nodejs-poolController-mqtt.  A mqtt integration for the nodejs-poolcontroller application to control pool equipment.
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU Affero General Public License as
-published by the Free Software Foundation, either version 3 of the
-License, or (at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU Affero General Public License for more details.
-
-You should have received a copy of the GNU Affero General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-Requries Russell Goldin (tagyoureit) nodejs-poolController be running on your network.  For details please visit [here](https://github.com/tagyoureit/nodejs-poolController)
-
-## What is nodejs-poolController
-
-nodejs-poolController is an application to communicate and control your Pentair compatible pool equipment.  [nodejs-poolController](https://github.com/tagyoureit/nodejs-poolController) by tagyoureit.
-
-## What is nodejs-poolController-mqtt
-
-Version 1.1: added support for temperature values (Pool, Spa and Air) to be submitted via mqtt.
-
-nodejs-poolController-mqtt is an integration for the nodejs-poolController app.  It allows the utilization of the mqtt protocol.  For more details on mqtt vist [here](http://mqtt.org)
-
-This allows easy integration with other home automation softwares such as [node-red](https://nodered.org) and allows the development of a dashboard for use on a mobile phone such as the following:
+This allows easy integration with other home automation softwares such as [Node-RED](https://nodered.org) and allows the development of a dashboard for use on a mobile phone such as the following:
 
 <img src="https://github.com/crsherman/nodejs-poolController-mqtt/blob/master/images/IMG_0600.PNG" height="400"> 
 <img src="https://github.com/crsherman/nodejs-poolController-mqtt/blob/master/images/IMG_0601.PNG" height="400"> 
+
+### Changelog
+
+* Version 1.1: added support for temperature values (Pool, Spa and Air) to be submitted via mqtt.
+
+## Requirements
+
+* A mqtt broker must be available on your network; this has been tested with the [Eclipse Mosquitto MQTT broker](https://mosquitto.org).
+
+* An instance of [nodejs-poolController](https://github.com/tagyoureit/nodejs-poolController) running on your system. **PLEASE NOTE: THIS INTEGRATION ONLY WORKS FOR VERSION 5.3.1 AND LOWER.  IT HAS NOT BEEN UPDATED FOR THE NEWER VERSION 6.0.**
+
+#### Optional
+
+* [Node-RED](https://nodered.org/) for integrating into a home automation system.
 
 ## Installation Instructions
 
@@ -76,20 +62,10 @@ export MQTT_PASSWORD=your-mqtt-password
 
 5. Run npm install in the `nodejs-poolController` folder where package.json exists
 
-## Requirements
-
-* A mqtt broker must be available on your network; this has been tested with the [Eclipse Mosquitto MQTT broker](https://mosquitto.org).
-
-* An instance of [nodejs-poolController](https://github.com/tagyoureit/nodejs-poolController) running on your system. **PLEASE NOTE: THIS INTEGRATION ONLY WORKS FOR VERSION 5.3.1 AND LOWER.  IT HAS NOT BEEN UPDATED FOR THE NEWER VERSION 6.0.**
-
-#### Optional
-
-* [Node-RED](https://nodered.org/) for integrating into a home automation system.
-
 ## Credits
 
-[Scargill's Tech Blog](https://tech.scargill.net).  A wealth of information on node-red, iot, home automation and such.  I cannot say enough good things about this website.  The LCD panel utilized on my node-red flow is directly from his blog (among other things).
+* [Scargill's Tech Blog](https://tech.scargill.net).  A wealth of information on node-red, iot, home automation and such.  I cannot say enough good things about this website.  The LCD panel utilized on my node-red flow is directly from his blog (among other things).
 
-[nodejs-poolController](https://github.com/tagyoureit/nodejs-poolController).  Tagyoureit's incredible app that provides connection to our Pentair pool controllers.
+* [nodejs-poolController](https://github.com/tagyoureit/nodejs-poolController).  Tagyoureit's incredible app that provides connection to our Pentair pool controllers.
 
 If I have missed anyone or group that my integration code utilizes I apologize.  Please let me know and I will add the appropriate credits.  
