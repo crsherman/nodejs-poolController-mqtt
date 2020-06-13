@@ -25,7 +25,9 @@ This allows easy integration with other home automation softwares such as [Node-
 
 * [Node-RED](https://nodered.org/) for integrating into a home automation system.
 
-## Installation Instructions
+## Installation
+
+### Manual Instructions
 
 1. Add the following to the `package.json` file in the `nodejs-poolController` folder 
 
@@ -61,6 +63,11 @@ export MQTT_PASSWORD=your-mqtt-password
 4. Add the `outputSocketToMQTT.js` file to the `nodejs-poolController/src/integrations` folder on your Rapsberry Pi
 
 5. Run npm install in the `nodejs-poolController` folder where package.json exists
+
+
+### Home Assistant
+
+See [Hass.io Add-on (Docker installation)](https://github.com/rsnodgrass/hassio-addons/tree/master/rs485-pool-controller) for easy installation in [Home Assistant](https://home-assistant.io/) environments.
 
 ## See Also
 
