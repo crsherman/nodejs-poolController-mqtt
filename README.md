@@ -48,7 +48,7 @@ This allows easy integration with other home automation softwares such as [node-
 "mqtt": "^2.17.0",
 ```
 
-2. Add the following to the `config.json` file in the `nodejs-poolController` folder 
+2. Add the following to the `config.json` file in the `nodejs-poolController` folder (**precaution: make a backup copy of your `config.json` or customized configuration file.**)
 
 ```json
 "integrations": {
@@ -57,9 +57,7 @@ This allows easy integration with other home automation softwares such as [node-
 "outputSocketToMQTT": {
         "level": "debug"
     },
-```
-
-Precaution:  make a backup copy of your config.json or customized configuration file.  
+``` 
 
 3. Modify `outputSocketToMQTT.js` (line 46) to specify the IP address of YOUR MQTT server on your network. ALTERNATIVELY, you can set environment variables where you start npm:
 
@@ -80,13 +78,13 @@ export MQTT_PASSWORD=your-mqtt-password
 
 ## Requirements
 
-* A mqtt broker must be available on your network; this has been tested with the Eclipse Mosquitto MQTT broker [here](https://mosquitto.org).
+* A mqtt broker must be available on your network; this has been tested with the [Eclipse Mosquitto MQTT broker](https://mosquitto.org).
 
-* An instance of nodejs-poolController running on your system. **PLEASE NOTE: THIS INTEGRATION ONLY WORKS FOR VERSION 5.3.1 AND LOWER.  IT HAS NOT BEEN UPDATED FOR THE NEWER VERSION 6.0.**
+* An instance of [nodejs-poolController](https://github.com/tagyoureit/nodejs-poolController) running on your system. **PLEASE NOTE: THIS INTEGRATION ONLY WORKS FOR VERSION 5.3.1 AND LOWER.  IT HAS NOT BEEN UPDATED FOR THE NEWER VERSION 6.0.**
 
 #### Optional
 
-* Node-Red if you are planning on integrating into a home automation system or such.
+* [Node-RED](https://nodered.org/) for integrating into a home automation system.
 
 ## Credits
 
