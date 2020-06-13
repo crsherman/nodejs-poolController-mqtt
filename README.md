@@ -1,4 +1,4 @@
-# nodejs-poolController-mqtt  Version 1.0
+# nodejs-poolController-mqtt
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 [![Join the chat at https://gitter.im/nodejs-poolController/Lobby](https://badges.gitter.im/nodejs-poolController/Lobby.svg)](https://gitter.im/nodejs-poolController/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) 
@@ -13,6 +13,7 @@ This allows easy integration with other home automation softwares such as [Node-
 ### Changelog
 
 * Version 1.1: added support for temperature values (Pool, Spa and Air) to be submitted via mqtt.
+* Version 1.0: initial release
 
 ## Requirements
 
