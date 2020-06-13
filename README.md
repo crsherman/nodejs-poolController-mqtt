@@ -41,42 +41,52 @@ This allows easy integration with other home automation softwares such as [node-
 
 ## Installation Instructions
 
-#1.  Add the following to the package.json file in the nodejs-poolController folder 
+1. Add the following to the package.json file in the nodejs-poolController folder 
 
+```json
 "jsonata": "^1.5.3",
 "mqtt": "^2.17.0",
+```
 
-#2.  Add the following to the config.json file in the nodejs-poolController folder 
+2. Add the following to the config.json file in the nodejs-poolController folder 
 
+```json
 "integrations": {
         "outputSocketToMQTT": 1
     },
 "outputSocketToMQTT": {
         "level": "debug"
     },
+```
 
 Precaution:  make a backup copy of your config.json or customized configuration file.  
 
-#3.  Modify outputSocketToMQTT.js line 42 to specify the IP address of YOUR MQTT server on your network. ALTERNATIVELY, you can set environment variables where you start npm:
+3. Modify outputSocketToMQTT.js line 42 to specify the IP address of YOUR MQTT server on your network. ALTERNATIVELY, you can set environment variables where you start npm:
 
+```bash
 export MQTT_BROKER_ADDRESS=http://192.168.1.179:1883
+```
 
 ...and optionally a username and password (if required):
 
+```bash
 export MQTT_USERNAME=your-mqtt-username
 export MQTT_PASSWORD=your-mqtt-password
+```
 
-#4.  Add the outputSocketToMQTT.js file to the nodejs-poolController/src/integrations folder on your Rapsberry Pi
+4. Add the `outputSocketToMQTT.js` file to the `nodejs-poolController/src/integrations` folder on your Rapsberry Pi
 
-#5.  Run npm install in the nodejs-poolController folder where package.json exists
+5. Run npm install in the nodejs-poolController folder where package.json exists
 
 ## Requirements
 
-A mqtt broker must be available on your network.  I utilize the Eclipse Mosquitto MQTT broker [here](https://mosquitto.org).
+* A mqtt broker must be available on your network; this has been tested with the Eclipse Mosquitto MQTT broker [here](https://mosquitto.org).
 
-Of course the nodejs-poolController running on your system.  PLEASE NOTE: THIS INTEGRATION ONLY WORKS FOR VERSION 5.3.1 AND LOWER.  IT HAS NOT BEEN UPDATED FOR THE NEWER VERSION 6.0.
+* An instance of nodejs-poolController running on your system. **PLEASE NOTE: THIS INTEGRATION ONLY WORKS FOR VERSION 5.3.1 AND LOWER.  IT HAS NOT BEEN UPDATED FOR THE NEWER VERSION 6.0.**
 
-Node-red if you are planning on integrating into a home automation system or such.
+#### Optional
+
+* Node-Red if you are planning on integrating into a home automation system or such.
 
 ## Credits
 
