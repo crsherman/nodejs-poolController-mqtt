@@ -1,25 +1,6 @@
-/*  nodejs-poolController.  An application to control pool equipment.
- *  Copyright (C) 2016, 2017.  Russell Goldin, tagyoureit.  russ.goldin@gmail.com
- *
- *  This program is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU Affero General Public License as
- *  published by the Free Software Foundation, either version 3 of the
- *  License, or (at your option) any later version.
- *
- *  This program is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU Affero General Public License for more details.
- *
- *  You should have received a copy of the GNU Affero General Public License
- *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+/* See https://github.com/crsherman/nodejs-poolController-mqtt/
+ * GNU Affero General Public License
  */
-
- /*
- *  Updated Integration for sending pool info via mqtt.
- *  Version 1.1 Updated service to include temperature values.
- */
-
 
 //This makes the module available to the app through BottleJS
 module.exports = function(container) {
