@@ -27,7 +27,7 @@ module.exports = function(container) {
     var broker_address = process.env.MQTT_BROKER_URL || "http://192.168.1.179:1883"
 
     var options = {
-	clientId: "nodejs-poolController-mqtt"
+		"clientId": "nodejs-poolController-mqtt"
     }
 
     // if a MQTT username/password is specified in the environment, use them for connecting to the broker
